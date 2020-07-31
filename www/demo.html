@@ -6,14 +6,14 @@
 
 			if (document.images) {
                 for(var i=1;i<=120;i++){
-                    img1 = new Image();
+                    img1[i] = new Image();
                     var url = "Cadre/";
                     if(i<=9) url=url +"000"
                     if(i>=10&&i<=99) url=url +"00"
                     if(i>=100&&i<=999) url=url +"0"
                     url = url + i.toString(10);
                     url = url+".png";
-                    img1.src = url;
+                    img1[i].src = url;
                 }
 			}
 
