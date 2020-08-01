@@ -17,7 +17,7 @@
                     if(i>=10&&i<=99) url=url +"00"
                     if(i>=100&&i<=999) url=url +"0"
                     url = url + i.toString(10);
-                    url = url+".png";
+                    url = url+".webp";
                     img1[i].src = url;
                     console.log(1);
                     sleep(2000);
@@ -107,7 +107,7 @@
             if(Xcoord>=100&&Xcoord<=999)
             url=url +"0"
             url = url + Xcoord.toString(10);
-            url = url+".png";
+            url = url+".webp";
             document.getElementById("example1").src = url;
         }
     })();</script>
