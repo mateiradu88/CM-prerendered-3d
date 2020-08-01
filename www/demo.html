@@ -108,7 +108,8 @@
                   (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
                   (doc && doc.clientTop  || body && body.clientTop  || 0 );
             }
-            var Xcoord=(Math.floor((event.pageX*3/32))+1)-60
+            var Xcoord=(Math.floor((event.pageX/window.innerWidth)*120*2)+1)-120
+            console.log(Xcoord+"   "+ event.pageX+"   "+ window.innerWidth)
             var Sxcoord=Math.floor(120/(1+Math.pow(2.71828,-0.085*(Xcoord-60))))+1
             if(Xcoord<=1)Xcoord=1;
             if(Xcoord>=120)Xcoord=120;
