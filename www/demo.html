@@ -6,12 +6,11 @@
             function sleep(ms) {
                 return new Promise(resolve => setTimeout(resolve, ms));
             }
-
-
-			if (document.images) {
-                img1 = new Array();
-                for(var i=1;i<=120;i++){
-                    img1[i] = new Image();
+            
+            img1 = new Array();
+            
+            function preload(i){
+                img1[i] = new Image();
                     var url = "Cadre/";
                     if(i<=9) url=url +"000"
                     if(i>=10&&i<=99) url=url +"00"
@@ -20,7 +19,12 @@
                     url = url+".webp";
                     img1[i].src = url;
                     console.log(1);
-                    sleep(2000);
+                    sleep(1000);
+            }
+
+			if (document.images) {
+                for(var i=1;i<=120;i++){
+                    preload(i);
                 }
 			}
 
